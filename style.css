@@ -1,0 +1,124 @@
+@font-face {
+  font-family: Work Sans;
+  src: url(assets/fonts/WorkSans-VariableFont_wght.ttf);
+  font-style: normal;
+}
+@font-face {
+  font-family: Work Sans;
+  src: url(assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
+  font-style: italic;
+}
+:root {
+  --white: hsl(0, 100%, 100%);
+  --purple: hsl(281, 83%, 54%);
+  --purple-100: hsl(275, 100%, 97%);
+  --purple-600: hsl(292, 16%, 49%);
+  --purple-950: hsl(292, 42%, 14%);
+  font-size: 14px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans";
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--purple-100);
+  background-image: url(assets/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: max(375px, 100%);
+  @media (min-width: 768px) {
+    background-image: url(assets/images/background-pattern-desktop.svg);
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  background-color: var(--white);
+  margin: 10.25rem 6vw;
+  padding: 1.65rem 1.75rem;
+  border-radius: 0.65rem;
+  box-shadow: 0 2rem 3rem 0px rgb(47, 21, 51, 0.10);
+}
+.faq {
+  display: flex;
+  gap: 1.7rem;
+  font-weight: 700;
+  font-size: 2.3rem;
+  color: var(--purple-950);
+  margin-bottom: 0.25rem;
+}
+.qna {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  border-bottom: 1px solid var(--purple-100);
+  padding-bottom: 1.45rem;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.01rem;
+  color: var(--purple-950);
+}
+.answer {
+  color: var(--purple-600);
+  line-height: 1.5;
+  width: 99%;
+}
+.qna:last-child {
+  border-bottom: 0;
+  margin-bottom: -1.25rem;
+}
+.question {
+    cursor: pointer;
+}
+.question h2:hover {
+    color: var(--purple);
+}
+.answer.show {
+  display: block;
+}
+
+.answer.hide {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 16px;
+  }
+  main {
+    width: 37.5rem;
+    margin: 10.5rem 0 2.5rem;
+    border-radius: 1.25rem;
+    padding: 2.5rem 2.5rem;
+    gap: 1.5rem;
+  }
+  .faq {
+    font-size: 3.5rem;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .faq img {
+    width: 2.5rem;
+  }
+  .question {
+    letter-spacing: 0rem;
+    gap: 1rem;
+  }
+  .qna {
+    gap: 1.5rem;
+  }
+  .answer {
+    width: 100%;
+  }
+}
