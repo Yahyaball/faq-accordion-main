@@ -9,11 +9,13 @@ qna.forEach((q) => {
         answer.classList.remove('show');
         answer.classList.add('hide');
         buttonIcon.setAttribute('src', 'assets/images/icon-plus.svg')
+        buttonIcon.setAttribute('aria-label', 'show')
 
     } else {
         answer.classList.remove('hide');
         answer.classList.add('show');
         buttonIcon.setAttribute('src', 'assets/images/icon-minus.svg')
+        buttonIcon.setAttribute('aria-label', 'hide')
     }
   });
   button.addEventListener("keydown", function(event) {
@@ -23,11 +25,13 @@ qna.forEach((q) => {
         answer.classList.remove('show');
         answer.classList.add('hide');
         buttonIcon.setAttribute('src', 'assets/images/icon-plus.svg')
+        buttonIcon.setAttribute('aria-label', 'show')
 
     } else {
         answer.classList.remove('hide');
         answer.classList.add('show');
         buttonIcon.setAttribute('src', 'assets/images/icon-minus.svg')
+        buttonIcon.setAttribute('aria-label', 'hide')
     }
   }
   })
