@@ -71,7 +71,6 @@ qna.forEach((q) => {
   });
 });
 ```
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
