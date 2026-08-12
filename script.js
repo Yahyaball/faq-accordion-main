@@ -4,7 +4,7 @@ qna.forEach((q) => {
   const button = q.querySelector(".question");
   const answer = q.querySelector(".answer");
   let buttonIcon = button.querySelector(".button-icon");
-  q.addEventListener("click", () => {
+  button.addEventListener("click", () => {
     if (answer.classList.contains('show')) {
         answer.classList.remove('show');
         answer.classList.add('hide');
@@ -16,8 +16,8 @@ qna.forEach((q) => {
         buttonIcon.setAttribute('src', 'assets/images/icon-minus.svg')
     }
   });
-  q.addEventListener("keydown", function(event) {
-      if (event.key === "Enter" || event.key === " ") {
+  button.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
     event.preventDefault();
         if (answer.classList.contains('show')) {
         answer.classList.remove('show');

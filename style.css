@@ -85,7 +85,7 @@ main {
 .question h2:hover {
     color: var(--purple);
 }
-.question:focus {
+.question:focus-visible {
     color: var(--purple);
 }
 .answer.show {
