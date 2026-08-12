@@ -85,6 +85,9 @@ main {
 .question h2:hover {
     color: var(--purple);
 }
+.question:focus {
+    color: var(--purple);
+}
 .answer.show {
   display: block;
 }

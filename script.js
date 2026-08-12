@@ -16,4 +16,19 @@ qna.forEach((q) => {
         buttonIcon.setAttribute('src', 'assets/images/icon-minus.svg')
     }
   });
+  q.addEventListener("keydown", function(event) {
+      if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+        if (answer.classList.contains('show')) {
+        answer.classList.remove('show');
+        answer.classList.add('hide');
+        buttonIcon.setAttribute('src', 'assets/images/icon-plus.svg')
+
+    } else {
+        answer.classList.remove('hide');
+        answer.classList.add('show');
+        buttonIcon.setAttribute('src', 'assets/images/icon-minus.svg')
+    }
+  }
+  })
 });

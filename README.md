@@ -47,7 +47,7 @@ Users should be able to:
 
 ### What I learned
 
-I have learned about the forEach function that allows you to make all buttons clickable with the addEventListener click function, so all elements are interactable to show and hide answers. It gave me a headache the first time I tried to code with JavaScript.
+I have learned about the forEach function that allows you to make all buttons clickable with the addEventListener click function, so all elements are interactable to show and hide answers, and also for the keydown function so it can be interactable with keyboard keys. It gave me a headache the first time I tried to code with JavaScript.
 
 These are the snippets that I use to make the website interactive:
 ```
@@ -69,6 +69,21 @@ qna.forEach((q) => {
         buttonIcon.setAttribute('src', 'assets/images/icon-minus.svg')
     }
   });
+  q.addEventListener("keydown", function(event) {
+      if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+        if (answer.classList.contains('show')) {
+        answer.classList.remove('show');
+        answer.classList.add('hide');
+        buttonIcon.setAttribute('src', 'assets/images/icon-plus.svg')
+
+    } else {
+        answer.classList.remove('hide');
+        answer.classList.add('show');
+        buttonIcon.setAttribute('src', 'assets/images/icon-minus.svg')
+    }
+  }
+  })
 });
 ```
 
